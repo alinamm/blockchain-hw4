@@ -54,7 +54,6 @@ describe("Uniswap: FirstToken and SecondToken", function () {
         let fsPoolContract = new Contract(fsPoolAddress, IUniswapV3PoolABI, deployer)
 
         const data = await getPoolData(fsPoolContract)
-        // console.log("Initial liquidity in pool:", data.liquidity.toString())
 
         await first.connect(deployer).approve(managerAddress, ethers.utils.parseEther('10000000000000000'))
         await second.connect(deployer).approve(managerAddress, ethers.utils.parseEther('10000000000000000'))
